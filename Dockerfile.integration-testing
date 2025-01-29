@@ -1,0 +1,6 @@
+FROM golang:1.23
+WORKDIR /app
+COPY ./timetablerapi/go.mod ./timetablerapi/go.sum ./
+RUN go mod download
+COPY ./timetablerapi/ .
+CMD ["go", "test", "-tags=integration", "./..."]
