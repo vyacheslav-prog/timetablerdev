@@ -4,7 +4,7 @@ minikube start
 
 eval $(minikube docker-env)
 
-docker build -t timetablerapi-integration-testing .
+docker build -t timetablerapi-integration-testing -f Dockerfile.timetablerapi-integration-testing ./../timetablerapi/
 
 kubectl apply -f postgresql-deployment.yaml
 kubectl apply -f postgresql-service.yaml
