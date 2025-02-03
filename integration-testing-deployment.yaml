@@ -8,6 +8,7 @@ spec:
       containers:
       - name: integration-testing
         image: timetablerapi-integration-testing
+        imagePullPolicy: Never
         env:
         - name: DATABASE_URL
           value: "postgres://testuser:testpassword@postgres:5432/testdb?sslmode=disable"
