@@ -3,4 +3,4 @@ WORKDIR /app
 COPY go.mod .
 RUN go mod download
 COPY . .
-CMD ["go", "test", "-tags", "testdb", "./..."]
+CMD ["go", "test", "-tags", "testdb", "timetablerapi/app"]
