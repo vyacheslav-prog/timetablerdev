@@ -1,6 +1,6 @@
 # Init environment
 
-minikube start
+minikube start --cni=calico
 
 kubectl apply -f postgresql-deployment.yaml
 kubectl apply -f postgresql-service.yaml
